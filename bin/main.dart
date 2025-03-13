@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
+import '../bin/domain/shopping_mall.dart';
 
 void main() {
   stdout.write(
@@ -7,4 +8,12 @@ void main() {
   );
 
   String? input = stdin.readLineSync(encoding: Encoding.getByName('utf-8')!);
+
+  var emart = ShoppingMall();
+
+  switch (input) {
+    case '1':
+      emart.showProducts();
+      break;
+  }
 }
