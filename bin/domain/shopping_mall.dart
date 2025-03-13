@@ -4,11 +4,11 @@ import '../data/product.dart';
 class ShoppingMall {
   // 상품 목록
   List<Product> productList = [
-    Product("셔츠", 45000),
-    Product("원피스", 30000),
-    Product("반팔티", 35000),
-    Product("반바지", 38000),
-    Product("양말", 5000),
+    Product("shirts", 45000),
+    Product("onepiece", 30000),
+    Product("short sleeves", 35000),
+    Product("short pants", 38000),
+    Product("socks", 5000),
   ];
 
   // 장바구니에 담긴 상품들의 총 가격
