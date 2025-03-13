@@ -43,6 +43,7 @@ class ShoppingMall {
         throw Exception('0개보다 많은 개수의 상품만 담을 수 있어요 !\n');
       }
 
+      productInCart.add(item.first.productName);
       totalPrice += item.first.productPrice * itemCount;
       print('장바구니에 상품이 담겼어요 !\n');
     } catch (e) {
