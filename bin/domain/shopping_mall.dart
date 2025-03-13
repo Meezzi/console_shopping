@@ -53,6 +53,11 @@ class ShoppingMall {
 
   // 장바구니에 담은 상품의 총 가격을 출력
   void showTotal() {
-    print('장바구니에 $totalPrice원 어치를 담으셨네요 !');
+    if (productInCart.isEmpty) {
+      print('장바구니에 담긴 상품이 없습니다.');
+      return;
+    }
+
+    print('장바구니에 ${productInCart.join(',')}(이)가 담겨있네요. 총 $totalPrice원 입니다 !\n');
   }
 }
