@@ -60,4 +60,7 @@ class ShoppingMall {
 
     print('장바구니에 ${productInCart.join(',')}(이)가 담겨있네요. 총 $totalPrice원 입니다 !\n');
   }
+
+  // 장바구니 초기화
+  void resetCart() {}
 }
