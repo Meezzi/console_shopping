@@ -15,5 +15,7 @@ void main() {
     case '1':
       emart.showProducts();
       break;
+    default:
+      print('지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..');
   }
 }
