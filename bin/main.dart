@@ -22,6 +22,7 @@ void main() {
         emart.showTotal();
         break;
       case '4':
+        print('정말 종료하시겠습니까?');
       default:
         print('지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..');
         break;
