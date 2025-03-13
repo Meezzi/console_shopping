@@ -15,6 +15,8 @@ class ShoppingMall {
   // 장바구니에 담긴 상품들의 총 가격
   int totalPrice = 0;
 
+  List<String> productInCart = [];
+
   // 상품 목록 출력
   void showProducts() {
     for (Product product in productList) {
@@ -41,6 +43,7 @@ class ShoppingMall {
         throw Exception('0개보다 많은 개수의 상품만 담을 수 있어요 !\n');
       }
 
+      productInCart.add(item.first.productName);
       totalPrice += item.first.productPrice * itemCount;
       print('장바구니에 상품이 담겼어요 !\n');
     } catch (e) {
@@ -50,6 +53,11 @@ class ShoppingMall {
 
   // 장바구니에 담은 상품의 총 가격을 출력
   void showTotal() {
-    print('장바구니에 $totalPrice원 어치를 담으셨네요 !');
+    if (productInCart.isEmpty) {
+      print('장바구니에 담긴 상품이 없습니다.');
+      return;
+    }
+
+    print('장바구니에 ${productInCart.join(',')}(이)가 담겨있네요. 총 $totalPrice원 입니다 !\n');
   }
 }
