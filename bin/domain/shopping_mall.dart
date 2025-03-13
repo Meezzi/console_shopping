@@ -31,7 +31,7 @@ class ShoppingMall {
       final item = productList.where((e) => e.productName == product);
 
       if (item.isEmpty) {
-        throw Exception('입력값이 올바르지 않아요!\n');
+        throw Exception('입력값이 올바르지 않아요 !\n');
       }
 
       stdout.write('상품 개수를 입력해 주세요 !\n');
