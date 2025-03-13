@@ -1,4 +1,5 @@
 import '../data/product.dart';
+import 'dart:io';
 
 // 전체적인 쇼핑몰을 관리하는 클래스
 class ShoppingMall {
@@ -22,7 +23,20 @@ class ShoppingMall {
   }
 
   // 상품을 장바구니에 담기
-  void addToCart() {}
+  void addToCart() {
+    try {
+      stdout.write('상품 이름을 입력해 주세요 !\n');
+      String? product = stdin.readLineSync();
+
+      final item = productList.where((e) => e.productName == product);
+
+      if (product == null || item.isEmpty) {
+        throw Exception('입력값이 올바르지 않아요!\n');
+      }
+    } catch (e) {
+      print('입력값이 올바르지 않아요 !\n');
+    }
+  }
 
   // 장바구니에 담은 상품의 총 가격을 출력
   void showTotal() {}
