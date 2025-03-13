@@ -32,6 +32,9 @@ void main() {
           print('종료하지 않습니다.');
           break;
         }
+      case '6':
+        emart.resetCart();
+        break;
       default:
         print('지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..');
         break;
