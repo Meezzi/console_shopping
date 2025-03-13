@@ -33,6 +33,13 @@ class ShoppingMall {
       if (product == null || item.isEmpty) {
         throw Exception('입력값이 올바르지 않아요!\n');
       }
+
+      stdout.write('상품 개수를 입력해 주세요 !\n');
+      int? itemCount = int.parse(stdin.readLineSync()!);
+
+      if (itemCount < 1) {
+        throw Exception('0개보다 많은 개수의 상품만 담을 수 있어요 !\n');
+      }
     } catch (e) {
       print('입력값이 올바르지 않아요 !\n');
     }
