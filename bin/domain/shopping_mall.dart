@@ -60,4 +60,16 @@ class ShoppingMall {
 
     print('장바구니에 ${productInCart.join(',')}(이)가 담겨있네요. 총 $totalPrice원 입니다 !\n');
   }
+
+  // 장바구니 초기화
+  void resetCart() {
+    if (productInCart.isEmpty) {
+      print('이미 장바구니가 비어있습니다.');
+      return;
+    }
+
+    print('장바구니를 초기화합니다.');
+    productInCart = [];
+    totalPrice = 0;
+  }
 }
