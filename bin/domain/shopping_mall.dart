@@ -62,5 +62,10 @@ class ShoppingMall {
   }
 
   // 장바구니 초기화
-  void resetCart() {}
+  void resetCart() {
+    if (productInCart.isEmpty) {
+      print('이미 장바구니가 비어있습니다.');
+      return;
+    }
+  }
 }
