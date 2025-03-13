@@ -28,6 +28,9 @@ void main() {
         if (isEnd == '5') {
           print('이용해 주셔서 감사합니다 ~ 안녕히 가세요 !');
           return;
+        } else {
+          print('종료하지 않습니다.');
+          break;
         }
       default:
         print('지원하지 않는 기능입니다 ! 다시 시도해 주세요 ..');
