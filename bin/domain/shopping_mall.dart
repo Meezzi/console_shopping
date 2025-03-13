@@ -15,6 +15,8 @@ class ShoppingMall {
   // 장바구니에 담긴 상품들의 총 가격
   int totalPrice = 0;
 
+  List<String> productInCart = [];
+
   // 상품 목록 출력
   void showProducts() {
     for (Product product in productList) {
