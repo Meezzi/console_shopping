@@ -1,5 +1,5 @@
 import 'dart:io';
-import '../bin/domain/shopping_mall.dart';
+import 'domain/usecase/shopping_mall.dart';
 import '../bin/utils/input.dart';
 
 void main() {
