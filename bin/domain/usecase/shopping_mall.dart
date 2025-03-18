@@ -1,5 +1,5 @@
-import 'entities/product.dart';
-import '../utils/input.dart';
+import '../entities/product.dart';
+import '../../utils/input.dart';
 import 'dart:io';
 
 // 전체적인 쇼핑몰을 관리하는 클래스
