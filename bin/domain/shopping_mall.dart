@@ -1,4 +1,5 @@
 import '../data/product.dart';
+import '../utils/input.dart';
 import 'dart:io';
 
 // 전체적인 쇼핑몰을 관리하는 클래스
@@ -28,7 +29,7 @@ class ShoppingMall {
   void addToCart() {
     try {
       stdout.write('상품 이름을 입력해 주세요 !\n');
-      String? product = stdin.readLineSync();
+      String? product = getUserInput();
 
       final item = productList.where((e) => e.productName == product);
 
@@ -37,7 +38,7 @@ class ShoppingMall {
       }
 
       stdout.write('상품 개수를 입력해 주세요 !\n');
-      int? itemCount = int.parse(stdin.readLineSync()!);
+      int? itemCount = int.parse(getUserInput()!);
 
       if (itemCount < 1) {
         throw Exception('0개보다 많은 개수의 상품만 담을 수 있어요 !\n');
