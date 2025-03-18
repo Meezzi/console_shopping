@@ -1,4 +1,4 @@
-import '../data/product.dart';
+import 'entities/product.dart';
 import '../utils/input.dart';
 import 'dart:io';
 
